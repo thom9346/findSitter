@@ -1,0 +1,20 @@
+
+<h3>Please choose your position on this website: </h3>
+
+<form>
+
+        <input type="radio" id="opt1" ngModel name="position"  value="baby" (click)="onClickBaby()"> Baby
+        <input type="radio" id ="opt2"ngModel name="position"   value="baby-sitter" (click) ="onClickSitter()"> Baby sitter<br>
+    
+</form>
+
+
+<div *ngIf="chooseBaby">
+        <app-baby></app-baby>
+
+
+</div>
+
+<div *ngIf="chooseSitter">
+        <app-baby-sitter></app-baby-sitter>
+</div>

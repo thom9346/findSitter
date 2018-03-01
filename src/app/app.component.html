@@ -1,0 +1,11 @@
+<!-- The content below is only a placeholder and can be replaced.-->
+
+<h1>Welcome to {{title}}</h1>
+
+<ul class="nav nav-tabs">
+    <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a routerLink="home" >Home</a></li>
+    <li [routerLinkActive]="['active']"><a routerLink="portal" >Portal</a></li>
+  </ul>
+  
+<router-outlet></router-outlet>
+

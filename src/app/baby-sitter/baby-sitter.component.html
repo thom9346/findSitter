@@ -1,0 +1,119 @@
+<div>
+
+        <h4>Please input following information about yourself: </h4>
+        <form #sitterForm="ngForm" >
+            <div>
+                <label for="firstName">First name: </label>
+                <input type="text" class="form-control" id="firstnameID" required [(ngModel)]="model.firstname" name="firstname" #firstname="ngModel">
+            </div>
+            <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert-danger">
+                    <div [hidden]="!firstname.errors.required"> 
+                        *First name is required
+                    </div>
+            </div>
+    
+            <div>
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="last-name" required [(ngModel)]="model.lastname" name="lastname" #lastname="ngModel">
+            </div>
+            <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert-danger">
+                    <div [hidden]="!lastname.errors.required"> 
+                        *Last name is required
+                    </div>
+            </div>
+    
+    
+    
+            <div>
+                <label for="age">Age:</label>
+                <input  type="number"  class="form-control" id="age" required [(ngModel)]="model.age" name="age" #age="ngModel">
+            </div>
+            <div *ngIf="age.errors && (age.dirty || age.touched)" class="alert-danger">
+                    <div [hidden]="!age.errors.required"> 
+                            *Age is required
+                    </div>
+    
+            </div>
+           
+              
+    
+                
+       
+    
+    
+            <div>
+                <label for="yearsOfExperience">Years of Expierence: </label>
+                <input type="number" class="form-control" id="years-experience" required [(ngModel)]="model.yearsOfExperience" name="yearsExp" #yearsExp="ngModel">
+            </div> 
+            <div *ngIf="yearsExp.errors && (yearsExp.dirty || yearsExp.touched)" class="alert-danger">
+                    <div [hidden]="!yearsExp.errors.required"> 
+                            *Years of experience is required (insert 0 if you have no years) <br>
+                            * Insert (0.11) if you have 11 months expierence.
+                    </div>
+            </div>
+    
+    
+    
+    
+                <div>
+                    <label for="gender">Gender</label>
+                    <input type="text" class="form-control" id="gender" required  [(ngModel)]="model.gender" name="gender" #gender="ngModel">
+                </div>
+                <div *ngIf="gender.errors && (gender.dirty || gender.touched)" class="alert-danger">
+                        <div [hidden]="!gender.errors.required"> 
+                                *Gender is required
+                        </div>
+                </div>
+    
+    
+    
+    
+                    <div>
+                        <label for="region">Region you want to babysit in: </label>
+                        <input type="text" class="form-control" id="region" required [(ngModel)]="model.region" minlength="3" maxlength="50" name="region" #region="ngModel">
+                    </div>
+                    <div *ngIf="region.errors && (region.dirty || region.touched)" class="alert-danger">
+                        <div [hidden]="!region.errors.required"> <!--this means that the div is by default hidden. then ! means that the region should no longer be hidden depending on the statement
+                        In this statement it requires that there is NO input made in the field. Then it sets hidden to false. Meaning that it's now visible.-->
+                            Region is required
+    
+                        </div>
+                        <div [hidden]="!region.errors.minlength">
+                            Region must be at least 3 characters long.
+    
+                        </div>
+                        <div [hidden]="!region.errors.maxlength">
+                            Region cannot be more than 50 characters long.
+    
+                        </div>
+    
+                    </div>
+    
+                        <div>
+                            <label for="phoneNumber">Phoner number</label>
+                            <input type="text" class="form-control" id="phoneNr">
+                        </div>
+                        <div>
+                                <label for="pictureURL">Picture URL</label>
+                                <input type="text" class="form-control" pattern="https?://.+" id="phoneNr" required [(ngModel)]="model.picture" name="phoneNr" #phoneNr="ngModel"> 
+                            </div>
+                            <div *ngIf="phoneNr.errors && (phoneNr.dirty || phoneNr.touched)" class="alert-danger">
+                                <div [hidden]="!phoneNr.errors.pattern">
+                                    Must be a valid URL
+                                </div>
+                                </div>
+    
+                            <div>
+                                <button type="submit" [disabled]="!sitterForm.form.valid">Submit</button>
+                            </div>
+    
+    
+    
+        
+    </form>
+    
+    <div>
+        <h2>Model:</h2>
+        {{currentSitter}}
+    </div>
+        </div>
