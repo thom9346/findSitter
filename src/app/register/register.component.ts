@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   chooseSitter: boolean = false;
 
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }

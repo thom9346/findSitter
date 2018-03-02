@@ -17,6 +17,8 @@ import { BabySitterComponent } from './baby-sitter/baby-sitter.component';
 import { PortalComponent } from './portal/portal.component';
 import { FindBabyComponent } from './find-baby/find-baby.component';
 import { FindSitterComponent } from './find-sitter/find-sitter.component';
+import { DataService } from './data.service';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { FindSitterComponent } from './find-sitter/find-sitter.component';
     BabySitterComponent,
     PortalComponent,
     FindBabyComponent,
-    FindSitterComponent
+    FindSitterComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { FindSitterComponent } from './find-sitter/find-sitter.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [AuthGuard, AuthService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

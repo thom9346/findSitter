@@ -1,7 +1,7 @@
 <div>
 
         <h4>Please input following information about yourself: </h4>
-        <form #sitterForm="ngForm" >
+        <form #sitterForm="ngForm" (submit)="onSubmit(babysitterForm)" >
             <div>
                 <label for="firstName">First name: </label>
                 <input type="text" class="form-control" id="firstnameID" required [(ngModel)]="model.firstname" name="firstname" #firstname="ngModel">
@@ -90,8 +90,8 @@
                     </div>
     
                         <div>
-                            <label for="phoneNumber">Phoner number</label>
-                            <input type="text" class="form-control" id="phoneNr">
+                            <label for="phoneNumber" >Phoner number</label>
+                            <input type="text" class="form-control" id="phoneNr" >
                         </div>
                         <div>
                                 <label for="pictureURL">Picture URL</label>

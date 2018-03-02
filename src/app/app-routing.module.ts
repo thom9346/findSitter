@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
 import { FindBabyComponent } from './find-baby/find-baby.component';
 import { FindSitterComponent } from './find-sitter/find-sitter.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, children: [
@@ -21,7 +22,8 @@ const routes: Routes = [
 
   {path: 'portal', component: PortalComponent, children: [
     {path: 'findBaby', component: FindBabyComponent},
-    {path: 'findSitter', component: FindSitterComponent}
+    {path: 'findSitter', component: FindSitterComponent},
+    {path: 'users', component: UsersComponent},
 
   ]},
  

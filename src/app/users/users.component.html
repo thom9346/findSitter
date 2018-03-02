@@ -1,0 +1,34 @@
+<h1>List of all users: </h1>
+<div class="userList">
+
+  <h3>Sitters: </h3>
+
+  <ul>
+    <li *ngFor="let sitter of sitters">
+
+     <b>First name: </b> {{sitter.firstname}}
+     <b>Last name:</b>  {{sitter.lastname}}
+     <b>age: </b> {{sitter.age}} year old
+     <b>Years of experience: </b> {{sitter.yearsOfExperience}}
+      <b>Region: </b> {{sitter.region}}
+    <b> Gender:  </b>{{sitter.gender}}
+     <b>Phone: </b>  {{sitter.phone}}
+    <b> Picture: </b> {{sitter.picture}}
+    </li>
+  </ul>
+
+  <h3>Babies: </h3>
+  <ul>
+    <li *ngFor="let baby of babies">
+
+     <b>First name: </b> {{baby.firstname}}
+     <b>age: </b> {{baby.age}} months
+    <b> Gender:  </b>{{baby.gender}}
+     <b>Postal code: </b>  {{baby.postalCode}}
+    <b> Picture: </b> {{baby.picture}}
+    </li>
+  </ul>
+
+
+
+</div>
