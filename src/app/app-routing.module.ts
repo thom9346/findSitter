@@ -21,8 +21,8 @@ const routes: Routes = [
   ]},
 
   {path: 'portal', component: PortalComponent, children: [
-    {path: 'findBaby', component: FindBabyComponent},
-    {path: 'findSitter', component: FindSitterComponent},
+    {path: 'findBaby', component: FindBabyComponent, canActivate: [AuthGuard]},
+    {path: 'findSitter', component: FindSitterComponent,  canActivate: [AuthGuard]},
     {path: 'users', component: UsersComponent},
 
   ]},
