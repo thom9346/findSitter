@@ -19,6 +19,7 @@ import { FindBabyComponent } from './find-baby/find-baby.component';
 import { FindSitterComponent } from './find-sitter/find-sitter.component';
 import { DataService } from './data.service';
 import { UsersComponent } from './users/users.component';
+import { AdminGuardService } from './admin-guard.service';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { UsersComponent } from './users/users.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AuthGuard, AuthService, DataService],
+  providers: [AuthGuard, AuthService, DataService, AdminGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

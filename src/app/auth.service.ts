@@ -8,6 +8,7 @@ import 'rxjs/add/operator/delay';
 @Injectable()
 export class AuthService {
   isLoggedIn = false;
+  isAdmin = false;
   private loggedInUser: any;
 
   // store the URL so we can redirect after logging in
@@ -20,6 +21,14 @@ export class AuthService {
       // this.loggedInUser = //what came back from the server.
       this.isLoggedIn = true;
     });
+  }
+
+  public loginAdmin(): Observable<boolean>{
+
+    return Observable.of(true).delay(1000).do(val => {
+      this.isAdmin = true;
+      this.isLoggedIn = true;
+    })
   }
 
   public logout(): void {

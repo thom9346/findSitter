@@ -10,6 +10,7 @@ import { PortalComponent } from './portal/portal.component';
 import { FindBabyComponent } from './find-baby/find-baby.component';
 import { FindSitterComponent } from './find-sitter/find-sitter.component';
 import { UsersComponent } from './users/users.component';
+import { AdminGuardService } from './admin-guard.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, children: [
@@ -23,7 +24,7 @@ const routes: Routes = [
   {path: 'portal', component: PortalComponent, children: [
     {path: 'findBaby', component: FindBabyComponent, canActivate: [AuthGuard]},
     {path: 'findSitter', component: FindSitterComponent,  canActivate: [AuthGuard]},
-    {path: 'users', component: UsersComponent},
+    {path: 'users', component: UsersComponent, canActivate: [AdminGuardService]},
 
   ]},
  
