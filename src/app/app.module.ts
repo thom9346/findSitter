@@ -20,8 +20,9 @@ import { FindSitterComponent } from './find-sitter/find-sitter.component';
 import { DataService } from './data.service';
 import { UsersComponent } from './users/users.component';
 import { AdminGuardService } from './admin-guard.service';
-
-
+import { UserDescriptionComponent } from './users/user-description/user-description.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +36,16 @@ import { AdminGuardService } from './admin-guard.service';
     PortalComponent,
     FindBabyComponent,
     FindSitterComponent,
-    UsersComponent
+    UsersComponent,
+    UserDescriptionComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [AuthGuard, AuthService, DataService, AdminGuardService],
   bootstrap: [AppComponent]

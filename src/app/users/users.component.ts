@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
 import { Sitter } from '../entities/sitter';
 import { Baby } from '../entities/baby';
+import { Output } from '@angular/core/src/metadata/directives';
+import { EventEmitter } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-users',
@@ -9,6 +11,9 @@ import { Baby } from '../entities/baby';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  
+  
+
 
   private sitters : Sitter[];
   private babies : Baby[];
@@ -30,6 +35,10 @@ export class UsersComponent implements OnInit {
     this.showAllBabies();
     this.showAllSitters();
   };
+
+  onBabyClicked(baby){
+   console.log(baby);
+  }
 
 
 
