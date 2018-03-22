@@ -1,11 +1,56 @@
 <!-- The content below is only a placeholder and can be replaced.-->
+<header>
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-indigo scrolling-navbar intro-fixed-nav" [containerInside]="false">
+  <logo>
+      <a class="logo navbar-brand" href="#"><strong>Find a Sitter</strong></a>
+  </logo>
+  <links>
+      <ul class="navbar-nav mr-auto">
 
-<h1>Welcome to {{title}}</h1>
+        
 
-<ul class="nav nav-tabs">
-    <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a routerLink="home" >Home</a></li>
-    <li [routerLinkActive]="['active']"><a routerLink="portal" >Portal</a></li>
-  </ul>
+            <!-- [routerLinkActive]="['active']" gør at hvis linket er klikket, adder den "active" til class, som i dette tilfælde gør, at det bliver highlightet -->
+          <li [routerLinkActive]="['active']" class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
+   
+          </li>
+          <li [routerLinkActive]="['active']" class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" routerLink="portal">Portal</a>
+          </li>
+          
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbRippleRadius>
+               <a class="nav-link" routerLink="home/login"><i class="fa fa-user"></i></a> <!--its font-awesome that allows these icons to be imported with icons like "fa fa-btc" -->
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" routerLink="home/payment"><i class="fa fa-credit-card"></i></a>
+          </li>
+          
+      </ul>
+  </links>
+</mdb-navbar>
+
+
+</header>
+<!-- Main -->
+
+
+<main class="mt-5" >
+  <div class="container" style="height:100px;">
+
+     
+    
+      
+      
+        <router-outlet></router-outlet>
+  </div>
+</main>
+
+
+
+
+
   
-<router-outlet></router-outlet>
+
 

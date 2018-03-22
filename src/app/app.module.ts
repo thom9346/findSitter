@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -41,12 +42,14 @@ import {MatInputModule} from '@angular/material/input';
   ],
   imports: [
     BrowserModule,
+    MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [AuthGuard, AuthService, DataService, AdminGuardService],
   bootstrap: [AppComponent]
 })
