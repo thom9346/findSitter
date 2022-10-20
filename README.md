@@ -11,6 +11,7 @@ The project was generated with [Angular CLI](https://github.com/angular/angular-
 
 Please note that this is not a maintained project. Newer versions of angular will likely NOT be able to run this project.
 To run I recommend using [Node Version 14.15.0](https://nodejs.org/dist/v14.15.0/) and Angular@6.08.
+Node-sass were deprecated and removed from package-lock.json. This might result in some undesired UI-bugs.
 
 After installing:
 
