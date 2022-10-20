@@ -1,4 +1,4 @@
-# FindASitter
+# findSitter
 
 This is an Angular application that was written during my Computer Science classes in 2018. It explores the basic features of Angular such as Components, Rotuing, Dependency Injection, Services, e2e testing, etc. 
 
