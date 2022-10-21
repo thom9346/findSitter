@@ -4,7 +4,7 @@ This is an Angular application that was written during my Computer Science class
 
 This is an example project merely meant to test and learn the capabilities of Angular and have no real-world use-case.
 
-The project was generated with [Angular CLI](https://github.com/angular/angular-cli version 1.6.8.
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 
 # Building and running 
